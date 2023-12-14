@@ -1,0 +1,99 @@
+<div class="sf9-announcement-bar  px-4 flex items-center h-[40px] text-white" style="background-color:var(--c-secondary)">
+<div class="flex gap-4 bg-red-400 w-full flex justify-center">
+    <span class="icon"> <img src="{{'Clock.svg' | asset_url}}" alt="icon"> </span>
+    <p> order now for next day delivery</p>
+   <a href="#"> Learn more </a>
+</div>
+ <span class="icon ml-auto">
+    <img src="{{ 'Close.svg' | asset_url }}" alt="close" >
+ </span>
+</div>
+
+  
+  {% schema %}
+    {
+      "name": "Announcement bar",
+      "class": "section-announcement-bar",
+      "settings": [
+        {
+          "type": "color",
+          "id": "announcement_bar_col",
+          "label": "Bar",
+          "default": "#4a4a4a"
+        },
+        {
+          "type": "color",
+          "id": "announcement_text_col",
+          "label": "Text",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "message_font_size",
+          "min": 11,
+          "max": 18,
+          "step": 1,
+          "unit": "px",
+          "label": "Announcement font size",
+          "default": 14
+        },
+        {
+          "type": "header",
+          "content": "Links"
+        },
+        {
+          "type": "paragraph",
+          "content": "Links, social media icons , and localization options will show in the menu on mobile"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social_icons",
+          "label": "Show social media links",
+          "default": true 
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "This menu won't show dropdown items"
+        },
+        {
+          "type": "header",
+          "content": "Country/Region Selector",
+          "info": "To add a country/region, go to your [payment settings.](/admin/settings/payments)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_country_selector",
+          "label": "Enable country/region selector",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Language Selector",
+          "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_language_selector",
+          "label": "Enable language selector",
+          "default": true
+        }
+      ],
+      "blocks": [
+        {
+          "type": "announcement",
+          "name": "Announcement",
+          "settings": [
+            {
+              "type": "richtext",
+              "id": "text",
+              "label": "Text",
+              "default": "<p>Announce <a href=\"#\">something</a> here</p>"
+            }
+          ]
+        }
+      ]
+    }
+  {% endschema %}
+  

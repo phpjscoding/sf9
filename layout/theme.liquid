@@ -39,21 +39,54 @@
     {{ logo_font | font_face: font_display: 'fallback' }}
     {{ nav_font | font_face: font_display: 'fallback' }}
     {{ nav_font_600 | font_face: font_display: 'fallback' }}
+
+    :root{
+      --c-secondary: #004289;
+      --c-primary: #70b72b;
+      --c-secondary-variant:#032C58;
+      --c-primary-variant:#5C9822;
+      --_c-orange-primary: #F15A24;
+      --c-black:#222222;
+      --c-light-variant:#FFFFFF;
+      --c-gray:#666666;
+--c-dark:#333333;
+--c-info:#0468DB;
+--c-info-variant:#B4D2F4;
+
+--c-success:#5ECE7B;
+--_c-orange-secondary: #F79C7C;
+--_c-slate-primary: #404040;
+--_c-slate-secondary: #8C8C8C;
+--_c-green-primary: #5ece7b;
+--_c-green-secondary: #9ee2b0;
+--_c-dark-primary: #1d1f22;
+--_c-dark-secondary: #43464E;
+--_c-gray-primary: #72757E;
+--_c-gray-secondary: #8D8F9A;
+--_c-gray-accent: #e0e0e1;
+--_c-light-primary: #f1f2f3;
+--_c-light-secondary: #ffffff;
+--_c-red-primary: #d12727;
+--_c-red-secondary: #fcede8;
+--_c-yellow-primary: #ecc713;
+--_c-yellow-secondary: #f6e389;
+--_c-blue-primary: #0468DB;
+--_c-blue-secondary: #e1f4fe;
+--font-2xs: 0.625rem 10px;
+--font-xs: 0.75rem 12px;
+--font-sm: 0.875rem 14px;
+--font-base: 1rem 16px;
+--font-lg: 1.125rem 18px;
+--font-xl: 1.5rem 24px;
+--font-family-primary: 'Nuacht'
+    }
+  
   </style>
+
 
   {% render 'social-meta-tags' %}
 
-  {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
-
-  {%- if settings.custom_theme_css != blank -%}
-    {{ 'custom.css' | asset_url | stylesheet_tag: preload: true }}
-  {%- endif -%}
-
-  {%- if settings.swatch_enabled and settings.swatch_value_list != blank -%}
-    <link rel="stylesheet" href="{{ 'swatches.css' | asset_url }}" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="{{ 'swatches.css' | asset_url }}"></noscript>
-  {%- endif -%}
-
+  <link rel="stylesheet" href="{{ 'output.css' | asset_url }}">
   <script>
     window.theme = window.theme || {};
     theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
@@ -102,6 +135,10 @@
   </script>
 
   {{ content_for_header }}
+
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body class="template-{{ template | split: '.' | first | handle }}
@@ -117,9 +154,9 @@
     </script>
   {%- endif -%}
 
-  <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
+  <a class="skip-link visually-hidden transition left-0 bg-primary:text-primary:content absolute p-3 m-3 -translate-y-16 focus:translate-y-0" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
 
-  {% section 'announcement-bar' %}
+  {% section 'sf9-announcement-bar' %} 
   {% section 'header' %}
   {% section 'store-messages' %}
 
@@ -131,16 +168,6 @@
     </div><!-- /.container -->
   </main><!-- /#content -->
 
-  {% if request.path != '/challenge' %}
-    <div id="pagefooter">
-      {% section 'cross-page-promos' %}
-      {% section 'footer' %}
-    </div>
 
-    {% section 'popup' %}
-  {% endif %}
-
-  {{ 'vendor.min.js'  | asset_url | script_tag }}
-  {{ 'theme.js'  | asset_url | script_tag }}
 </body>
 </html>
