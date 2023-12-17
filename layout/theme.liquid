@@ -16,7 +16,15 @@
   </title>
 
   {% render 'head-tag' %}
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400&family=IBM+Plex+Sans+Condensed:wght@700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
   {%- liquid
     assign base_font = settings.type_base_font
     assign base_font_bold = base_font | font_modify: 'weight', 'bolder'
@@ -41,7 +49,7 @@
     {{ nav_font_600 | font_face: font_display: 'fallback' }}
 
     :root{
-      --c-secondary: #004289;
+      --c-secondary: #004289; 
       --c-primary: #70b72b;
       --c-secondary-variant:#032C58;
       --c-primary-variant:#5C9822;
@@ -49,10 +57,11 @@
       --c-black:#222222;
       --c-light-variant:#FFFFFF;
       --c-gray:#666666;
+      --c-white:#fff;
 --c-dark:#333333;
 --c-info:#0468DB;
 --c-info-variant:#B4D2F4;
-
+--c-danger:#DA394C;
 --c-success:#5ECE7B;
 --_c-orange-secondary: #F79C7C;
 --_c-slate-primary: #404040;
@@ -87,6 +96,9 @@
   {% render 'social-meta-tags' %}
 
   <link rel="stylesheet" href="{{ 'output.css' | asset_url }}">
+  <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+  <script src="{{ 'swiper-element.js' |  asset_url }}" defer ></script>
+
   <script>
     window.theme = window.theme || {};
     theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
@@ -137,7 +149,6 @@
   {{ content_for_header }}
 
  
-  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -157,17 +168,17 @@
   <a class="skip-link visually-hidden transition left-0 bg-primary:text-primary:content absolute p-3 m-3 -translate-y-16 focus:translate-y-0" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
 
   {% section 'sf9-announcement-bar' %} 
-  {% section 'header' %}
+  {% section 'main-header-area' %}
   {% section 'store-messages' %}
 
   <main id="content" role="main">
-    <div class="container cf">
+    <div class="">
 
       {{ content_for_layout }}
 
     </div><!-- /.container -->
   </main><!-- /#content -->
-
+{% section 'sf9-footer' %}
 
 </body>
 </html>

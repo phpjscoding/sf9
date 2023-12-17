@@ -1,0 +1,58 @@
+<footer class="main-footer">
+    <ul class="main-footer-links container mx-auto grid grid-cols-3 md:grid-cols-4   ">
+        <li class="logo">
+            <img src="{{ 'logo.png' | asset_url}}" alt="logo" loading="eager">
+ 
+        </li>
+        <li class="flex flex-col justify-end">
+
+            <p class="text-zinc-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">info</p>
+            {% for link in linklists.footer.links %}
+            <a href="{{link.url}}" class="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">{{link.title}}</a>
+            {% endfor %}
+        </li>
+        <li class="flex flex-col justify-end">
+
+            <p class="text-zinc-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">info</p>
+            <div><span style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">Tel
+                </span><span style="text-sky-800 text-base font-bold font-['IBM Plex Sans'] leading-relaxed">012
+                    3456789<br /></span><span
+                    style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">E-mail
+                </span><span
+                    style="text-sky-800 text-base font-bold font-['IBM Plex Sans'] leading-relaxed">hello@domain.com<br /></span><span
+                    style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed"><br />Lorem Ipsum
+                    Outdoor <br />Unit 1, Lipsum,<br />City, Co. County<br /><br />Follow Us</span></div>
+
+        </li>
+        <li class="bg-yellow-400 col-span-3 md:col-span-1">
+            <div class="w-[357px] h-[359px] p-10 bg-sky-800 flex-col justify-center items-center gap-5 inline-flex w-full">
+                <div class="h-[104px] flex-col justify-center items-center gap-5 flex">
+                    <div class="w-[277px] text-white text-2xl font-bold font-['IBM Plex Sans'] capitalize">join our
+                        Newsletter</div>
+                    <div
+                        class="self-stretch opacity-60 text-white text-base font-normal font-['IBM Plex Sans'] leading-relaxed">
+                        Be the first to know about Our offers, events, new arrivals & sales.</div>
+                </div>
+                <div class="relative grid md:grid-cols-2 gap-8 md:grid-cols-1">
+                    <form action="" class="w-full h-full bg-green-300" id="newletterform">
+                      
+                        <input type="email" id="newsletter-input" class="w-full h-[52px] relative bg-stone-100" >
+                    </form>
+                    <div class="h-[52px] py-[18px] bg-sky-950 mid-center">
+                        <button form="newletterform" class="w-full h-full text-center text-white text-base font-bold font-['IBM Plex Sans'] uppercase leading-none tracking-wider">
+                            Sign up
+                        </button>
+                    </div>
+              
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+    <div class="w-full h-[106px] p-10 bg-white justify-center items-center gap-40 inline-flex">
+    <div class="text-center  text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">Copyright © StudioForty9  |   Cookies   |  Terms & Conditions</div>
+    <span> <img src="{{ 'sf9.svg' | asset_url }}" alt="sf9"> </span>
+
+</div>
+</footer>

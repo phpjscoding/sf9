@@ -1,9 +1,36 @@
 {
   "sections": {
+    "slideshowclassic":{
+      "type":"sf9-slideshowclassic"
+    },
+    "usp-bar":{
+      "type":"sf9-usp-bar"
+    },
+    "text-over-img":{
+      "type":"sf9-text-over-img"
+    },
+    "favourites":{
+      "type":"sf9-favourites"
+    },
+    "news-letter":{
+      "type":"sf9-newsletter"
+    },
+    "our-story":{
+      "type":"sf9-our-story"
+    }
+    
     
   },
   "order": [
-    
+    "slideshowclassic",
+    "usp-bar",
+    "text-over-img",
+    "favourites",
+    "news-letter",
+    "our-story",
+    "usp-bar"
+
+     
  
   ]
 }

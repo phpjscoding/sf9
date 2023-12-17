@@ -1,0 +1,47 @@
+<div class=" relative container mx-auto main-header-area  flex border" style="font-family: 'IBM Plex Mono', monospace;font-weight:500">
+    <div class="logo w-[146] h-[117]">
+        <img src="{{ 'logo.png' | asset_url}}" alt="logo" loading="eager">
+    </div>
+    <div class="flex w-full items-center flex-col">
+        <div class="search-bar flex w-full gap-8 justify-center items-center px-4">
+            <div class="relative w-full">
+                <label class="sr-only" for="search"> Search </label>
+      
+                <input class="w-full h-10  border-none bg-white pe-10 ps-4 text-sm shadow-sm " id="search" type="search" placeholder="What are you looking for?">
+      
+                <button type="button" class="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-gray-50 p-2 text-gray-600 transition hover:text-gray-700">
+                  <span class="sr-only">Search</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </button>
+              </div>
+        <div class="header-cart-heart flex items-center justify-center gap-4">
+            <span id="wish-list-icon"> <img src="{{ 'heart.svg' | asset_url }}" alt=""></span>
+            <a id="cart-icon" class="flex items-center justify-center gap-2"> <img src="{{ 'add-to-cart.svg' | asset_url }}" alt=""> 
+             <span class="capitalize"> cart </span>
+             <span>0</span>
+             </a>
+
+             </div>
+        </div>
+        <div class="header-bottom w-full h-full">
+            <label for="menu-handle" class=" items-center justify-center absolute bottom-0 right-0 md:hidden">
+              <span class="cursor-pointer">
+              
+                <svg width="50" fill="none" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M8 7.298a.8.8 0 0 1 .8-.8h16.4a.8.8 0 0 1 .8.8v.4a.8.8 0 0 1-.8.8H8.8a.8.8 0 0 1-.8-.8v-.4ZM8 21.298a.8.8 0 0 1 .8-.8h16.4a.8.8 0 0 1 .8.8v.4a.8.8 0 0 1-.8.8H8.8a.8.8 0 0 1-.8-.8v-.4ZM8 14.298a.8.8 0 0 1 .8-.8h16.4a.8.8 0 0 1 .8.8v.4a.8.8 0 0 1-.8.8H8.8a.8.8 0 0 1-.8-.8v-.4ZM5 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5 21.498a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5 14.498a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" fill="#004289" class="fill-000000"></path></svg>
+              </span>
+            </label>
+            <input type="checkbox" id="menu-handle"  class="hidden">
+            <ul class="header-links flex lg:justify-center 
+            bg-white gap-0 md:gap-[3%] items-center bg-green-100 h-full w-full  ">
+            {% for link in linklists.main-menu.links %}
+                <li class="header-link">
+                    <a href="{{ link.url }}" > {{ link.title }} </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+    </div>
+</div>    

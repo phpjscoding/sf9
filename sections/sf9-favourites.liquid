@@ -1,0 +1,64 @@
+
+<div class="favourites-carousel pb-8 mb-14 mt-8">
+    <div class="text-center text-sky-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">Our Favourites</div>
+    <ul class="max-w-full">
+   <swiper-container
+    class="favourites-slider"  
+    space-between="10"
+    init="true">
+         
+            {% for i in (1..8) %} 
+                <swiper-slide class="max-w-[338px]"> 
+                <li class="product-card">
+                    <div class="h-[470.88px] opacity-10 bg-black"></div>
+                    <div class=" h-[129.96px] py-[22.59px] flex-col justify-start items-start inline-flex">
+    <div class="self-stretch h-[59.79px] flex-col justify-start items-start flex">
+        <div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider">Columbia</div>
+        <div class="self-stretch h-[41.79px] text-sky-800 text-base font-medium font-['IBM Plex Sans'] capitalize leading-tight">Nulla porttitor accumsan tincidunt.</div>
+    </div>
+    <div class="justify-start items-start gap-[11.29px] inline-flex">
+        <div class="text-red-500 text-sm font-bold font-['Helvetica'] leading-snug">€270.83</div>
+        <div class="text-sky-800 text-base font-normal font-['Helvetica'] line-through leading-relaxed">€310.83</div>
+    </div>
+</div>
+                </li>
+                </swiper-slide>
+            {% endfor %}
+    </swiper-container>
+
+    </ul>
+</div>
+
+    <script>
+  // swiper element
+  const swiperEl = document.querySelector('.favourites-slider');
+    Object.assign(swiperEl, {
+      slidesPerView: 1, 
+      spaceBetween: 10, 
+      centeredSlides:true,
+      pagination:true,
+    
+      autoplay: {
+   delay: 1000,
+ },
+     
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 5,  
+          spaceBetween: 20,
+        },
+      },
+    });
+    swiperEl.initialize();
+
+    // swiperEl.initialize();
+</script>
+
