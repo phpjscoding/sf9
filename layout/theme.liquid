@@ -11,7 +11,7 @@
 <head>
   <!-- Symmetry 5.6.0 -->
 
-  <title>
+  <title> 
     {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
@@ -89,14 +89,14 @@
 --font-xl: 1.5rem 24px;
 --font-family-primary: 'Nuacht'
     }
-  
+
+ 
+
   </style>
 
 
   {% render 'social-meta-tags' %}
 
-  <link rel="stylesheet" href="{{ 'output.css' | asset_url }}">
-  <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
   <script src="{{ 'swiper-element.js' |  asset_url }}" defer ></script>
 
   <script>
@@ -148,7 +148,9 @@
 
   {{ content_for_header }}
 
- 
+  {{ 'output.css' | asset_url |  stylesheet_tag }}
+ {{ 'custom.css' | asset_url |  stylesheet_tag }}
+ {{ 'customizations.css' | asset_url |  stylesheet_tag }}
 
 </head>
 
