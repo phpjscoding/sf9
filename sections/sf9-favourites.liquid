@@ -1,16 +1,25 @@
 
 <div class="favourites-carousel pb-8 mb-14 mt-8">
     <div class="text-center text-sky-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">Our Favourites</div>
-    <ul class="max-w-full">
+    <ul class="max-w-full border relative">
+      <div class="swiper-button-next hidden md:grid absolute left-0 z-10 top-[30%] h-12 w-12 rounded-full bg-white ring  place-items-center bg-red-500">
+       <img src="{{ 'Arrow.png' | asset_url }}" alt="">
+      </div>
+      <div class="swiper-button-prev hidden md:grid absolute right-0 z-10 top-[30%] h-12 w-12 rounded-full bg-white ring  place-items-center rotate-180">
+        <img src="{{ 'Arrow.png' | asset_url }}" alt="">
+       </div>
    <swiper-container
-    class="favourites-slider"  
+    class="favourites-slider mb-8"  
     space-between="10"
     init="true">
          
             {% for i in (1..8) %} 
-                <swiper-slide class="max-w-[338px]"> 
-                <li class="product-card">
-                    <div class="h-[470.88px] opacity-10 bg-black"></div>
+                <swiper-slide 
+                class="w-[338px]">  
+                <li class="product-card ">
+                    <div class="h-[470.88px]">
+                      <img src="{{'product-card-img.png' |  asset_url}}" alt="product" loading="lazy" class="max-w-full max-h-full ">
+                    </div>
                     <div class=" h-[129.96px] py-[22.59px] flex-col justify-start items-start inline-flex">
     <div class="self-stretch h-[59.79px] flex-col justify-start items-start flex">
         <div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider">Columbia</div>
@@ -33,29 +42,34 @@
   // swiper element
   const swiperEl = document.querySelector('.favourites-slider');
     Object.assign(swiperEl, {
-      slidesPerView: 1, 
-      spaceBetween: 10, 
+      slidesPerView: 4, 
       centeredSlides:true,
       pagination:true,
+      loop:true,
+      navigation:false,
     
-      autoplay: {
-   delay: 1000,
- },
+  breakpoints: { 
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 5, 
+      
+    },
+
+    // when window width is >= 640px
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20,  
+
      
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1024: {
-          slidesPerView: 5,  
-          spaceBetween: 20,
-        },
-      },
+      navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+   
+  },
+    }
+  }
+    
     });
     swiperEl.initialize();
 
