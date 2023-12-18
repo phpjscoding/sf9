@@ -146,7 +146,8 @@
     document.documentElement.classList.add('js');
   </script>
 
-  {{ content_for_header }}
+  {% render 'boost-sd-fallback' %}
+    {{ content_for_header }}
 
   {{ 'output.css' | asset_url |  stylesheet_tag }}
  {{ 'custom.css' | asset_url |  stylesheet_tag }}

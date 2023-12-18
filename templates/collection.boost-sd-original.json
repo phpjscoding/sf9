@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "main": {
+      "type": "sf9-main-collection",
+      "settings": {
+      }
+    },
+    "news-letter": {
+      "type": "sf9-newsletter",
+      "settings": {
+      }
+    },
+    "our-story": {
+      "type": "sf9-our-story",
+      "settings": {
+      }
+    },
+    "usp-bar": {
+      "type": "sf9-usp-bar",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "news-letter",
+    "our-story",
+    "usp-bar"
+  ]
+}

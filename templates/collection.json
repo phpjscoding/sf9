@@ -1,25 +1,51 @@
 {
   "sections": {
-     "main": { 
-      "type": "sf9-main-collection"
-  
-},
-"news-letter":{
-  "type":"sf9-newsletter"
-},
-"our-story":{
-  "type":"sf9-our-story"
-} ,
-"usp-bar":{
-  "type":"sf9-usp-bar"
-}
-},
-
-
+    "main": {
+      "type": "sf9-main-collection",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "news-letter": {
+      "type": "sf9-newsletter",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "our-story": {
+      "type": "sf9-our-story",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "usp-bar": {
+      "type": "sf9-usp-bar",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1b928fc2-98ab-4aea-a87d-0ba052257602": {
+      "type": "apps",
+      "blocks": {
+        "589f9156-d63a-4146-bfdc-48e22c5d5e66": {
+          "type": "shopify:\/\/apps\/boost-ai-search-discovery\/blocks\/product-filter\/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "589f9156-d63a-4146-bfdc-48e22c5d5e66"
+      ],
+      "settings": {
+      }
+    }
+  },
   "order": [
+    "1b928fc2-98ab-4aea-a87d-0ba052257602",
     "main",
     "news-letter",
     "our-story",
     "usp-bar"
-  ]
+  ],
+  "wrapper": ".boost-sd__product-filter-fallback"
 }
