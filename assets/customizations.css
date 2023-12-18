@@ -14,7 +14,8 @@ button.boost-sd__pagination-number.boost-sd__pagination-number--active.boost-sd_
 }
 
 button.boost-sd__pagination-number.boost-sd__pagination-number--square {
-    background-color:#F5F6F4!important
+    background-color:#F5F6F4!important;
+    color:#666666!important;
 }
 .mid-center{
     display: flex;
