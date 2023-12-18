@@ -1,4 +1,6 @@
-
+.container{
+    margin: auto;
+}
 .mid-center{
     display: flex;
     justify-content: center;
