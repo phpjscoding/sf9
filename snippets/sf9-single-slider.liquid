@@ -1,0 +1,70 @@
+<div class="xl:w-[511px]"> 
+    <swiper-container 
+    slides-per-view="1" 
+    speed="500" 
+    loop="true" 
+    class="hero-swiper-2 max-w-full" 
+    pagination="true"
+    >
+{% if block.settings.toggle_1 %}  
+        <swiper-slide class="">
+
+        <div loading="lazy" class=" min-h-[350px] md:h-[578px] slide min-w-sm h-full  bg-gray-700 flex items-center justify-center"
+        style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url({{ block.settings.img_1 | image_url }}) lightgray 50% / cover no-repeat;"> 
+        
+           <article class="z-10 content text-center flex items-center justify-center flex-col md:gap-4" >
+               <p class="uppercase"> {{ block.settings.small_text_1 }} </p> 
+               <h2 class="uppercase"> {{ block.settings.heading_1 }} </h2>
+               <p class="mb-8"> {{ block.settings.paragraph_1 }} </p>
+               <a href="">
+                 <span class="btn-v1 uppercase"> {{ block.settings.button_text_1 }} </span>
+               </a>
+               
+             </article>
+        </div>
+        </swiper-slide>
+    {% endif %}
+        {% comment %} second slide {% endcomment %}
+    {% if block.settings.toggle_2 %} 
+        <swiper-slide class="">
+
+        <div loading="lazy" class=" min-h-[350px] md:h-[578px] slide min-w-sm h-full  bg-gray-700 flex items-center justify-center"
+        style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url({{ block.settings.img_2 | image_url }}) lightgray 50% / cover no-repeat;"> 
+        
+           <article class="z-10 content text-center flex items-center justify-center flex-col md:gap-4" >
+               <p class="uppercase"> {{ block.settings.small_text_2 }} </p> 
+               <h2 class="uppercase"> {{ block.settings.heading_2 }} </h2>
+               <p class="mb-8"> {{ block.settings.paragraph_2 }} </p>
+               <a href="">
+                 <span class="btn-v1 uppercase"> {{ block.settings.button_text_2 }} </span>
+               </a>
+               
+             </article>
+        </div>
+        </swiper-slide>
+    {% endif %}
+        {% comment %} third slide {% endcomment %}
+    {% if block.settings.toggle_3 %} 
+    <swiper-slide class="">
+
+        <div loading="lazy" class=" min-h-[350px] md:h-[578px] slide min-w-sm h-full  bg-gray-700 flex items-center justify-center"
+        style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url({{ block.settings.img_3 | image_url }}) lightgray 50% / cover no-repeat;"> 
+        
+           <article class="z-10 content text-center flex items-center justify-center flex-col md:gap-4" >
+               <p class="uppercase"> {{ block.settings.small_text_3 }} </p> 
+               <h2 class="uppercase"> {{ block.settings.heading_3 }} </h2>
+               <p class="mb-8"> {{ block.settings.paragraph_3 }} </p>
+               <a href="">
+                 <span class="btn-v1 uppercase"> {{ block.settings.button_text_3 }} </span>
+               </a>
+               
+             </article>
+        </div>
+        </swiper-slide>
+    {% endif %}
+
+
+        
+      
+     </swiper-container>
+     </div>

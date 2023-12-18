@@ -1,132 +1,304 @@
 
+
 <div class="slideshow-classic relative">
    <div class="container mx-auto gap-4 grid md:grid-cols-2  relative">
-    <div class="xl:w-[511px]"> 
-    <swiper-container 
-    slides-per-view="1" 
-    speed="500" 
-    loop="true" 
-    class="hero-swiper-2 max-w-full" 
-    pagination="true"
-    >
-       {% for i in (1..3) %}
-        <swiper-slide class="">
+    {% for block in section.blocks %}
+      {% render 'sf9-single-slider',block:block %}
 
-        <div loading="lazy" class=" min-h-[350px] md:h-[578px] slide min-w-sm h-full  bg-gray-700 flex items-center justify-center"
-        style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url({{'slide-2.jpg' | asset_url}}) lightgray 50% / cover no-repeat;"> 
-        
-           <article class="z-10 content text-center flex items-center justify-center flex-col md:gap-4" >
-               <p class="uppercase"> everything you need to know</p>
-               <h2 class="uppercase"> fishing </h2>
-               <p class="mb-8">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-               <a href="">
-                 <span class="btn-v1 uppercase"> SHOP FISHING </span>
-               </a>
-               
-             </article>
-        </div>
-        </swiper-slide>
-        
-       {% endfor %}
-     </swiper-container>
-     </div>
-     <div class="xl:w-[869px]"> 
-    <swiper-container 
-    slides-per-view="1" 
-    speed="1500" 
-    delay="1000"
-    loop="true" 
-    class="hero-swiper-1 max-w-full" 
-    
-    pagination="true"
-    init="true"
-    >
-       {% for x in (1..3) %}
-        <swiper-slide style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url({{'slide-2.jpg' | asset_url}}) lightgray 50% / cover no-repeat;">
-          <div class="sm:h-[350px] md:h-[578px] bg-black bg-opacity-30 justify-center items-center flex">
-    <div class="flex-col justify-center items-center gap-10 flex  min-h-[350px] md:h-[578px] ">
-        <div class="flex-col justify-start items-center gap-3 flex">
-          <article class="z-10 content text-center flex items-center justify-center flex-col gap-4" >
-               <p class="uppercase"> everything you need to know</p>
-               <h2 class="uppercase"> outdoor </h2>
-               <p class="mb-8">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-               <a href="">
-                 <span class="btn-v1 uppercase"> SHOP outdoor </span>
-               </a>
-               
-             </article>
-        </div>
-    </div>
-</div>
-
-    
-        </swiper-slide>
-        
-       {% endfor %}
-     </swiper-container>
-     </div>
-       
+    {% endfor %}
     
    </div>
 </div> 
-
 {% schema %}
   {
-    "name": "Slideshow",
-    "tag": "section",
-    "class": "slideshow",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Slideshow settings"
-      }
-    ],
-    "max_blocks": 3,
-    "blocks": [
-       {
-         "name": "Slide",
-         "type": "slide",
-         "settings": [
-           {
-             "type": "image_picker",
-             "id": "image",
-             "label": "Image"
-           },
-           {
-        "type": "text",
-        "id": "small_heading",
-        "label": "Small Heading"
-      },
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading"
-      },
-      {
-        "type": "text",
-        "id": "paragraph",
-        "label": "Paragraph"
-      }
-         ]
-       }
-    ],
-    "presets": [
-      {
-        "name": "Slideshow",
-        "settings": {
-          "title": "Slideshow"
+    "name": "Dual Slider",
+     "settings":[],
+     "max_blocks": 2, 
+
+     "blocks": [
+    {
+      "name": "Left slide",
+      "type": "slide_1_content",
+      
+      "settings": [
+        {
+          "type":"header",
+          "content":"First Slide"
         },
-        "blocks": [
-          {
-            "type": "slide"
-          },
-          {
-            "type": "slide"
-          }
-        ]
-      }
-    ]
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_1",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_1",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_1",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_1",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_1",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_1",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        },
+        {
+          "type":"header",
+          "content":"Second Slide"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_2",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_2",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_2",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_2",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_2",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        },
+        {
+          "type":"header",
+          "content":"Third Slide"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_3",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_3",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_3",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_3",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_3",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_3",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        }
+      ]
+    },
+    {
+      "name": "Right slide",
+      "type": "slide_2_content",
+   
+      "settings": [
+  
+        {
+          "type":"header",
+          "content":"First Slide"
+        },
+      
+        {
+          "type": "image_picker",
+          "id": "img_1",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_1",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_1",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_1",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_1",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_1",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_1",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        },
+        {
+          "type":"header",
+          "content":"Second Slide"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_2",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_2",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_2",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_2",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_2",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_2",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        },
+        {
+          "type":"header",
+          "content":"Third Slide"
+        },
+        {
+          "type": "image_picker",
+          "id": "img_3",
+          "label": "Right image"
+        },
+        {
+          "type": "text",
+          "id": "small_text_3",
+          "label": "Small text",
+          "default": "everything you need to know"
+        },
+        {
+          "type": "text",
+          "id": "heading_3",
+          "label": "Heading",
+          "default": "Fishing"
+        },
+        {
+          "type": "text",
+          "id": "paragraph_3",
+          "label": "Paragraph",
+          "default": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+        }, {
+          "type": "text",
+          "id": "button_text_3",
+          "label": "Button text",
+          "default": "Shop"
+        }, {
+          "type": "url",
+          "id": "btn_url_3",
+          "label": "Button URL"
+         
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_3",
+          "label": "Show/Hide Slide",
+          "default": true
+         
+        }
+      ]
+    }
+  ],
+    "presets": [{
+      "name": "Dual Slider"
+    }]
   }
   {% endschema %}
-  
