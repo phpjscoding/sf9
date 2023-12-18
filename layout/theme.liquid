@@ -173,6 +173,9 @@
   {% section 'sf9-announcement-bar' %} 
   {% section 'main-header-area' %}
   {% section 'store-messages' %}
+  {% if template.name == 'collection' %}
+    {% render 'sf9-banner',title:collection.title %}
+  {% endif %}
 
   <main id="content" role="main">
     <div class="">
