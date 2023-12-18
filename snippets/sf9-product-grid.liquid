@@ -1,16 +1,22 @@
 <ul class="grid md:grid-cols-3 grid-cols-2 gap-2">
-    {% for n in (1..9) %}
-       <div class="collection-product-card bg-black ">
-         <div class="h-[358.04px] opacity-10 bg-black"></div>
-         <div class="bg-white border h-[129.96px] py-[22.59px] flex-col justify-start items-start flex">
-<div class="self-stretch h-[59.79px] flex-col justify-start items-start flex">
-<div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider">Vendor</div>
-<div class="self-stretch h-[41.79px] text-sky-800 text-base font-medium font-['IBM Plex Sans'] capitalize leading-tight">3/4 Sleeve kimino dress</div>
-</div>
-<div class="justify-start items-start gap-[11.29px] inline-flex">
-<div class="text-zinc-800 text-base font-bold font-['Helvetica'] leading-relaxed">€70.00</div>
-</div>
-</div>
-       </div>
+    {% for product in collection.products limit:9 %}
+      <a href="{{ product.url }}">
+        <li class="collection-product-card  ">
+          <div class="max-h-[600px] bg-black">
+            <img src="{{ product.featured_image | image_url }}" alt=" {{ product.title }} " class=" object-fit"> 
+          </div>
+          <div class="bg-white border h-[129.96px] py-[22.59px] flex-col justify-start items-start flex">
+ <div class="self-stretch h-[59.79px] flex-col justify-start items-start flex">
+ <div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider"> {{ product.vendor }} </div>
+ <div class="self-stretch h-[41.79px] text-sky-800 text-base font-medium font-['IBM Plex Sans'] capitalize leading-tight"> {{ product.title }} </div>
+ </div>
+ <div class="justify-start items-start gap-[11.29px] inline-flex">
+ <div class="text-zinc-800 text-base font-bold font-['Helvetica'] leading-relaxed">
+   {{ product.price | money }}
+   </div>
+ </div>
+ </div>
+        </li>
+      </a>
     {% endfor %}
 </ul>

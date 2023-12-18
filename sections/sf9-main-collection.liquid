@@ -1,5 +1,41 @@
-{% render 'sf9-banner' %}
-<div class="sf9-collection w-full">
+{% render 'sf9-banner',title:collection.title %}
+<div class="container mx-auto h-[38px] ">
+    <ul class="flex items-center justify-between  h-full ">
+       <div class="breakcumps flex items-center gap-2">
+        <li > <a href="/" class="text-sky-800 text-xs font-medium font-['IBM Plex Sans'] uppercase leading-tight tracking-wide">
+        Home
+       </a> </li>
+       <li class="text-sky-800"> <svg width="4" height="9" viewBox="0 0 4 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+       <path d="M0.545455 8.37354L2.38419e-07 7.7334L2.90167 4.37354L2.38419e-07 1.01368L0.545455 0.373535L4 4.37357L0.545455 8.37354Z" fill="#004289"/>
+       </svg>
+       </li> 
+       <li> <a href="{{ collection.url }}" class="text-sky-800 text-xs font-medium font-['IBM Plex Sans'] uppercase leading-tight tracking-wide">
+       {{ collection.handle }}
+      </a> </li>
+       </div>
+       <div class="sorting">
+          <div class="sorting-form flex items-center">
+            <span class="opacity-30 text-sky-800 text-[17px] font-normal font-['IBM Plex Sans'] leading-tight">Sort by:</span>
+            <select name="sorting" id="sorting" class="text-right text-sky-800 text-base font-normal font-['IBM Plex Sans'] capitalize leading-tight p-1 bg-white appearance-none">
+                <option class="text-right text-sky-800 text-base font-normal font-['IBM Plex Sans'] capitalize leading-tight px-4 py-2">best selling</option>
+                <option class="text-right text-sky-800 text-base font-normal font-['IBM Plex Sans'] capitalize leading-tight px-4 py-2">Newer</option>
+                <option class="text-right text-sky-800 text-base font-normal font-['IBM Plex Sans'] capitalize leading-tight px-4 py-2">Popular</option>
+            </select>
+            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 13.4545L13.6202 12.5L19.5 17.5779L25.3798 12.5L26.5 13.4545L19.4999 19.5L12.5 13.4545Z" fill="#222222"/>
+</svg>
+
+            
+
+          </div>
+       </div>
+
+
+    </ul>
+   
+</div>
+<hr >
+<div class="sf9-collection w-full mt-8">
    <div class="relative container mx-auto grid grid-cols-2  md:grid-cols-4 gap-2">
        <label for="show-filters" class=" md:hidden absolute -top-12 z-20 -left-0 cursor-pointer">
          <img src="{{ 'filter.png' | asset_url }}" alt="filter" class="w-12 h-12"> 
@@ -9,7 +45,7 @@
         {% render 'sf9-filter-sidebar' %}  
       </div>
     <section class="product-grid  col-span-3">
-       {% render 'sf9-product-grid' %}
+       {% render 'sf9-product-grid',collection:collection %}
     </section>
 
    </div>

@@ -3,7 +3,7 @@
     <div class="text-center text-sky-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">Our Favourites</div>
     <ul class="max-w-full border relative">
       <div class="swiper-button-next hidden md:grid absolute left-0 z-10 top-[30%] h-12 w-12 rounded-full bg-white ring  place-items-center bg-red-500">
-       <img src="{{ 'Arrow.png' | asset_url }}" alt="">
+       <img src="{{ 'Arrow.png' | asset_url }}" alt=""> 
       </div>
       <div class="swiper-button-prev hidden md:grid absolute right-0 z-10 top-[30%] h-12 w-12 rounded-full bg-white ring  place-items-center rotate-180">
         <img src="{{ 'Arrow.png' | asset_url }}" alt="">
@@ -13,24 +13,30 @@
     space-between="10"
     init="true">
          
-            {% for i in (1..8) %} 
+            {% for item in section.settings.fav_collection.products limit:12 %}  
                 <swiper-slide 
-                class="w-[338px]">  
+                class="w-[338px] max-h-[600px]">  
+                <a href="{{ item.url }}">
                 <li class="product-card ">
                     <div class="h-[470.88px]">
-                      <img src="{{'product-card-img.png' |  asset_url}}" alt="product" loading="lazy" class="max-w-full max-h-full ">
+                      <img src="{{ item.featured_image | image_url }}" alt="product" loading="lazy" class="max-w-full max-h-full ">
                     </div>
                     <div class=" h-[129.96px] py-[22.59px] flex-col justify-start items-start inline-flex">
     <div class="self-stretch h-[59.79px] flex-col justify-start items-start flex">
-        <div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider">Columbia</div>
-        <div class="self-stretch h-[41.79px] text-sky-800 text-base font-medium font-['IBM Plex Sans'] capitalize leading-tight">Nulla porttitor accumsan tincidunt.</div>
+        <div class="text-sky-800 text-sm font-bold font-['IBM Plex Sans'] uppercase leading-[17.62px] tracking-wider"> {{ item.title}} </div>
+        <div class="self-stretch h-[41.79px] text-sky-800 text-base font-medium font-['IBM Plex Sans'] capitalize leading-tight">
+          {{ item.description |  strip_html | truncatewords: 4 }}
+        </div>
     </div>
     <div class="justify-start items-start gap-[11.29px] inline-flex">
-        <div class="text-red-500 text-sm font-bold font-['Helvetica'] leading-snug">€270.83</div>
-        <div class="text-sky-800 text-base font-normal font-['Helvetica'] line-through leading-relaxed">€310.83</div>
+        <div class="text-red-500 text-sm font-bold font-['Helvetica'] leading-snug">
+          {{ item.price | money }}
+          </div>
+        <div class="text-sky-800 text-base font-normal font-['Helvetica'] line-through leading-relaxed"> {{ item.compare_at_price | money }} </div>
     </div>
 </div>
                 </li>
+                </a>
                 </swiper-slide>
             {% endfor %}
     </swiper-container>
@@ -42,7 +48,7 @@
   // swiper element
   const swiperEl = document.querySelector('.favourites-slider');
     Object.assign(swiperEl, {
-      slidesPerView: 4, 
+      slidesPerView: 1, 
       centeredSlides:true,
       pagination:true,
       loop:true,
@@ -57,18 +63,25 @@
     },
     // when window width is >= 640px
     768: {
-      slidesPerView: 4,
-      spaceBetween: 20,  
+      slidesPerView: 3,
+      spaceBetween: 10,  
       navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
    
   },
     },
-    1200: {
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 10
+      
+
+      
+    },
+    1300: {
       slidesPerView: 6,
-      spaceBetween: 20, 
-      loop:true
+      spaceBetween: 20
+      
 
       
     },
@@ -80,3 +93,20 @@
     // swiperEl.initialize();
 </script>
 
+{% schema %}
+{
+  "name": "Collection Slider",
+  "settings": [
+
+    {
+      "type":"collection",
+      "id": "fav_collection",
+      "label": "Favourite collection"
+      
+      
+    }
+
+    
+    ]
+}
+{% endschema %}
