@@ -1,10 +1,31 @@
-<div class="basic-content-page">
-    <div class="container grid grid-cols-4 mx-auto">
-        <div class="cols-span-3 min-h-screen bg-green">
+<div class="basic-content-page ">
+    <div class="container mx-auto grid grid-cols-4 ">
+        <div class="bg-white  col-span-3 md:p-16">
+            <article>
+                <header>
+                    <h1 class="text-sky-800 text-xl md:text-[66px] font-bold font-['IBM Plex Sans'] uppercase md:leading-[66px]"> {{ page.title }} </h1>
+                </header>
+              
+                <div class="content first text-zinc-800 text-base font-normal font-['IBM Plex Sans'" >
+                    {{ page.content }}
 
+                </div>
+            </article>
         </div>
-        <div class="cols-span-1 bg-key-800 min-h-screen">
+        <div class="bg-graylight col-span-1">
+            <side>
+                <ul class="md:pl-[63px]  md:pr-[123px] pt-[51px] pb-[1604px] bg-stone-100 flex-col justify-start items-start md:gap-[43px] inline-flex ">
+    <li class="h-[29px] text-sky-800 md:text-3xl text-lg font-bold font-['IBM Plex Sans'] uppercase">Sidebar</li>
+       <div class="">
+        {% for link in linklists.sidebar.links %}
+            <li  class="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed"> <a href="{{link.url}}">{{ link.title }}</a> </li>
+        {% endfor %}
+       </div>
+  
+</ul>
+            </side>
+        </div> 
 
-        </div>
     </div>
 </div>
+

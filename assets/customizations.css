@@ -31,6 +31,9 @@ button.boost-sd__pagination-number.boost-sd__pagination-number--square {
 .text-secondary{
     color:#004289;
 }
+.bg-graylight{
+    background-color: #F5F6F4;
+}
 .header-link a{
     color: var(--c-text);
 text-align: center;

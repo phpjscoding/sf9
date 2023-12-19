@@ -1,1 +1,20 @@
-{"sections":{"main":{"type":"sf9-basic-content-page","settings":{}}},"order":["main"]}
+{
+  "sections": {
+     "main": { 
+        "type": "sf9-basic-content-page", 
+        "settings": {} 
+        },
+        "news-letter":{
+            "type":"sf9-newsletter"
+          },
+          "our-story":{
+            "type":"sf9-our-story"
+          } 
+     },
+  "order": [
+    "main",
+    "news-letter",
+    "our-story"
+
+]
+}
