@@ -1,25 +1,141 @@
 {
   "sections": {
-    "slideshowclassic":{
-      "type":"sf9-slideshowclassic"
+    "slideshowclassic": {
+      "type": "sf9-slideshowclassic",
+      "blocks": {
+        "f97b0323-5062-4c52-a153-9ea40ca6b933": {
+          "type": "slide_1_content",
+          "settings": {
+            "img_1": "shopify:\/\/shop_images\/slide-2.jpg",
+            "small_text_1": "everything you need to know",
+            "heading_1": "Fishing",
+            "paragraph_1": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_1": "Shop fishing",
+            "btn_url_1": "",
+            "toggle_1": true,
+            "small_text_2": "everything you need to know",
+            "heading_2": "Fishing",
+            "paragraph_2": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_2": "Shop",
+            "btn_url_2": "",
+            "toggle_2": true,
+            "small_text_3": "everything you need to know",
+            "heading_3": "Fishing",
+            "paragraph_3": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_3": "Shop",
+            "btn_url_3": "",
+            "toggle_3": true
+          }
+        },
+        "472ef168-730c-49c3-af78-f5a6d69c5d99": {
+          "type": "slide_2_content",
+          "settings": {
+            "img_1": "shopify:\/\/shop_images\/slide-1.png",
+            "small_text_1": "on an adventure",
+            "heading_1": "outdoor",
+            "paragraph_1": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_1": "Shop outdoor",
+            "btn_url_1": "",
+            "toggle_1": true,
+            "small_text_2": "everything you need to know",
+            "heading_2": "Fishing",
+            "paragraph_2": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_2": "Shop",
+            "btn_url_2": "",
+            "toggle_2": true,
+            "small_text_3": "everything you need to know",
+            "heading_3": "Fishing",
+            "paragraph_3": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+            "button_text_3": "Shop",
+            "btn_url_3": "",
+            "toggle_3": true
+          }
+        }
+      },
+      "block_order": [
+        "f97b0323-5062-4c52-a153-9ea40ca6b933",
+        "472ef168-730c-49c3-af78-f5a6d69c5d99"
+      ],
+      "settings": {
+      }
     },
-    "usp-bar":{  
-      "type":"sf9-usp-bar"
+    "usp-bar": {
+      "type": "sf9-usp-bar",
+      "blocks": {
+        "c3e7cb6e-07e1-47ba-9d3b-54e971d9ebd2": {
+          "type": "feature",
+          "settings": {
+            "text": "28 Days Return",
+            "img": "shopify:\/\/shop_images\/Return.png"
+          }
+        },
+        "53856476-0f5c-4660-ac4f-c2a6927241f7": {
+          "type": "feature",
+          "settings": {
+            "text": "free delivery on orders over €40",
+            "img": "shopify:\/\/shop_images\/truck.png"
+          }
+        },
+        "ec3b70ca-5332-49b3-a8fd-34b007efc35f": {
+          "type": "feature",
+          "settings": {
+            "text": "In Business Since 1977",
+            "img": "shopify:\/\/shop_images\/Marker.png"
+          }
+        }
+      },
+      "block_order": [
+        "c3e7cb6e-07e1-47ba-9d3b-54e971d9ebd2",
+        "53856476-0f5c-4660-ac4f-c2a6927241f7",
+        "ec3b70ca-5332-49b3-a8fd-34b007efc35f"
+      ],
+      "settings": {
+        "color": "#004289"
+      }
     },
-    "text-over-img":{
-      "type":"sf9-text-over-img"
+    "text-over-img": {
+      "type": "sf9-text-over-img",
+      "settings": {
+        "product1_text1": "HIKING ESSENTIALS",
+        "product1_text2": "Nullan quis risus eget urna mollis ornare vel eu leo.",
+        "product1_text3": "SHOP HIKING",
+        "product1_link": "",
+        "product1_image": "shopify:\/\/shop_images\/index-img-2.png",
+        "product1_color": "",
+        "product2_text1": "Accessories",
+        "product2_text2": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+        "product2_text3": "SHOP Accessories",
+        "product2_link": "",
+        "product2_image": "shopify:\/\/shop_images\/index-img-3.png",
+        "product2_color": "",
+        "product3_text1": "outdoor essentials",
+        "product3_text2": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+        "product3_text3": "SHOP outdoor essentials",
+        "product3_link": "",
+        "product3_image": "shopify:\/\/shop_images\/index-img-1.jpg"
+      }
     },
-    "favourites":{
-      "type":"sf9-favourites"
+    "favourites": {
+      "type": "sf9-favourites",
+      "settings": {
+        "fav_collection": "clothing"
+      }
     },
-    "news-letter":{
-      "type":"sf9-newsletter"
+    "news-letter": {
+      "type": "sf9-newsletter",
+      "settings": {
+      }
     },
-    "our-story":{
-      "type":"sf9-our-story"
-    } 
-    
-    
+    "our-story": {
+      "type": "sf9-our-story",
+      "settings": {
+        "text_1": "QUISQUE VELIT NISI-",
+        "text_2": "Pellentesque in ipsum id orci porta dapibus.",
+        "text_3": "Learn more",
+        "url": "",
+        "color": "#F5F6F4"
+      }
+    }
   },
   "order": [
     "slideshowclassic",
@@ -28,8 +144,5 @@
     "favourites",
     "news-letter",
     "our-story"
-
-     
- 
   ]
 }

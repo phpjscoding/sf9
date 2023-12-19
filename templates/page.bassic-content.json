@@ -1,20 +1,24 @@
 {
   "sections": {
-     "main": { 
-        "type": "sf9-basic-content-page", 
-        "settings": {} 
-        },
-        "news-letter":{
-            "type":"sf9-newsletter"
-          },
-          "our-story":{
-            "type":"sf9-our-story"
-          } 
-     },
+    "main": {
+      "type": "sf9-basic-content-page",
+      "settings": {
+      }
+    },
+    "news-letter": {
+      "type": "sf9-newsletter",
+      "settings": {
+      }
+    },
+    "our-story": {
+      "type": "sf9-our-story",
+      "settings": {
+      }
+    }
+  },
   "order": [
     "main",
     "news-letter",
     "our-story"
-
-]
+  ]
 }
