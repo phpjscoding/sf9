@@ -118,7 +118,7 @@
     "favourites": {
       "type": "sf9-favourites",
       "settings": {
-        "fav_collection": ""
+        "fav_collection": "clothing"
       }
     },
     "news-letter": {
