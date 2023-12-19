@@ -100,16 +100,19 @@
         "product1_text2": "Nullan quis risus eget urna mollis ornare vel eu leo.",
         "product1_text3": "SHOP HIKING",
         "product1_link": "",
+        "product1_image": "shopify:\/\/shop_images\/index-img-2.png",
         "product1_color": "",
-        "product2_text1": "HIKING ESSENTIALS",
-        "product2_text2": "Nullan quis risus eget urna mollis ornare vel eu leo.",
-        "product2_text3": "SHOP HIKING",
+        "product2_text1": "Accessories",
+        "product2_text2": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+        "product2_text3": "SHOP Accessories",
         "product2_link": "",
+        "product2_image": "shopify:\/\/shop_images\/index-img-3.png",
         "product2_color": "",
-        "product3_text1": "HIKING ESSENTIALS",
-        "product3_text2": "Nullan quis risus eget urna mollis ornare vel eu leo.",
-        "product3_text3": "SHOP HIKING",
-        "product3_link": ""
+        "product3_text1": "outdoor essentials",
+        "product3_text2": "Curabitur blandit tempus porttitor. Maecenas faucibus mollis.",
+        "product3_text3": "SHOP outdoor essentials",
+        "product3_link": "",
+        "product3_image": "shopify:\/\/shop_images\/index-img-1.jpg"
       }
     },
     "favourites": {
