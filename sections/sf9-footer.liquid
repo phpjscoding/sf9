@@ -1,5 +1,5 @@
-<footer class="main-footer">
-    <ul class="main-footer-links container mx-auto grid grid-cols-3 md:grid-cols-4   ">
+<footer class="main-footer pt-8">
+    <ul class="main-footer-links container mx-auto grid grid-cols-3 md:grid-cols-4 items-start mt-8   ">
         <li class="logo">
             <img src="{{ 'logo.png' | asset_url}}" alt="logo" loading="eager">
  
@@ -11,21 +11,49 @@
             <a href="{{link.url}}" class="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">{{link.title}}</a>
             {% endfor %}
         </li>
-        <li class="flex flex-col justify-end">
+        <li class="flex flex-col justify-end ">
 
-            <p class="text-zinc-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">info</p>
-            <div><span style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">Tel
-                </span><span style="text-sky-800 text-base font-bold font-['IBM Plex Sans'] leading-relaxed">012
+            <p class="text-zinc-800 text-2xl font-bold font-['IBM Plex Sans'] capitalize">Contact </p>
+            <div><span class="text-zinc-800 text-xs md:text-base  font-normal font-['IBM Plex Sans'] leading-relaxed">Tel
+                </span><span class="text-secondary text-xs md:text-base  font-bold font-['IBM Plex Sans'] leading-relaxed">012
                     3456789<br /></span><span
-                    style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">E-mail
-                </span><span
-                    style="text-sky-800 text-base font-bold font-['IBM Plex Sans'] leading-relaxed">hello@domain.com<br /></span><span
-                    style="text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed"><br />Lorem Ipsum
-                    Outdoor <br />Unit 1, Lipsum,<br />City, Co. County<br /><br />Follow Us</span></div>
+                    class="text-zinc-800 text-xs md:text-base  font-normal font-['IBM Plex Sans'] leading-relaxed">E-mail
+                </span> 
+                      
+                     </span>
+                     <span class="text-xs text-secondary  
+                     font-bold font-['IBM Plex Sans'] pb-8 " > hello@domain.com </span> 
+                     <div class="mb-4 "></div>
+                     <span
+                    class="
+                    text-zinc-800 text-base 
+                    font-normal 
+                    font-['IBM Plex Sans'] 
+                    leading-relaxed
+                    text-xs md:text-base 
+                    "><br />Lorem Ipsum 
+                    Outdoor <br />Unit 1, Lipsum,<br />City, Co. County<br /><br />Follow Us</span>
+                     </div>
+                    <div class="icons h-[50px] gap-2 flex items-center justify-center  mt-2">
+                        <a href="www.instagram.com" class="block h-[25px] md:h-[50px] md:w-[50px] c-secondary">
+                            <img src="{{ 'Instagram.png' |  asset_url }}" alt="instgram">
+                        </a>
+                        <a href="www.facebook.com" class="block h-[25px] md:h-[50px] md:w-[50px]  c-secondary">
+                            <img src="{{ 'Facebook.png' |  asset_url }}" alt="facebook">
+                        </a>
+                        <a href="www.pinterest.com" class="block h-[25px] md:h-[50px] md:w-[50px]  c-secondary">
+                            <img src="{{ 'Pinterest.png' |  asset_url }}" alt="pinterest">
+
+                        </a>
+                        <a href="www.x.com" class="block h-[25px] md:h-[50px] md:w-[50px]  c-secondary">
+                            <img src="{{ 'Twitter.png' |  asset_url }}" alt="x">
+
+                        </a> 
+                    </div>
 
         </li>
         <li class="bg-yellow-400 col-span-3 md:col-span-1">
-            <div class="w-[357px] h-[359px] p-10 bg-sky-800 flex-col justify-center items-center gap-5 inline-flex w-full">
+            <div class="w-[357px] h-[359px] p-10 c-secondary flex-col justify-center items-center gap-5 inline-flex w-full">
                 <div class="h-[104px] flex-col justify-center items-center gap-5 flex">
                     <div class="w-[277px] text-white text-2xl font-bold font-['IBM Plex Sans'] capitalize">join our
                         Newsletter</div>
@@ -33,7 +61,7 @@
                         class="self-stretch opacity-60 text-white text-base font-normal font-['IBM Plex Sans'] leading-relaxed">
                         Be the first to know about Our offers, events, new arrivals & sales.</div>
                 </div>
-                <div class="relative grid md:grid-cols-2 gap-8 md:grid-cols-1">
+                <div class="relative grid  gap-8 grid-cols-1">
                     <form action="" class="w-full h-full bg-green-300" id="newletterform">
                       
                         <input type="email" id="newsletter-input" class="w-full h-[52px] relative bg-stone-100" >
@@ -50,8 +78,13 @@
 
 
     </ul>
-    <div class="w-full h-[106px] p-10 bg-white justify-center items-center gap-40 inline-flex">
-    <div class="text-center  text-zinc-800 text-base font-normal font-['IBM Plex Sans'] leading-relaxed">Copyright © StudioForty9  |   Cookies   |  Terms & Conditions</div>
+    <div class="h-[106px] 
+    p-10 bg-white justify-center 
+    items-center gap-8 flex flex-wrap "> 
+    <p class="
+    text-zinc-800 text-base font-normal
+     font-['IBM Plex Sans'] ">
+     Copyright © StudioForty9  |   Cookies   |  Terms & Conditions</p>
     <span> <img src="{{ 'sf9.svg' | asset_url }}" alt="sf9"> </span>
 
 </div>

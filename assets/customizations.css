@@ -25,7 +25,12 @@ button.boost-sd__pagination-number.boost-sd__pagination-number--square {
 .main-header-area input::placeholder{
     color:var(--c-secondary)
 }
-
+.c-secondary,.bc-secondary{
+    background-color:#004289
+}
+.text-secondary{
+    color:#004289;
+}
 .header-link a{
     color: var(--c-text);
 text-align: center;
