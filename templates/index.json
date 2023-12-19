@@ -6,10 +6,11 @@
         "f97b0323-5062-4c52-a153-9ea40ca6b933": {
           "type": "slide_1_content",
           "settings": {
+            "img_1": "shopify:\/\/shop_images\/slide-2.jpg",
             "small_text_1": "everything you need to know",
             "heading_1": "Fishing",
             "paragraph_1": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-            "button_text_1": "Shop",
+            "button_text_1": "Shop fishing",
             "btn_url_1": "",
             "toggle_1": true,
             "small_text_2": "everything you need to know",
