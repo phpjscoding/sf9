@@ -61,6 +61,34 @@
     },
     "usp-bar": {
       "type": "sf9-usp-bar",
+      "blocks": {
+        "c3e7cb6e-07e1-47ba-9d3b-54e971d9ebd2": {
+          "type": "feature",
+          "settings": {
+            "text": "28 Days Return",
+            "img": "shopify:\/\/shop_images\/Return.png"
+          }
+        },
+        "53856476-0f5c-4660-ac4f-c2a6927241f7": {
+          "type": "feature",
+          "settings": {
+            "text": "free delivery on orders over €40",
+            "img": "shopify:\/\/shop_images\/truck.png"
+          }
+        },
+        "ec3b70ca-5332-49b3-a8fd-34b007efc35f": {
+          "type": "feature",
+          "settings": {
+            "text": "In Business Since 1977",
+            "img": "shopify:\/\/shop_images\/Marker.png"
+          }
+        }
+      },
+      "block_order": [
+        "c3e7cb6e-07e1-47ba-9d3b-54e971d9ebd2",
+        "53856476-0f5c-4660-ac4f-c2a6927241f7",
+        "ec3b70ca-5332-49b3-a8fd-34b007efc35f"
+      ],
       "settings": {
         "color": "#004289"
       }
